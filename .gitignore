@@ -22,3 +22,14 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+/.mvn/
+/microservicesboot.ipr
+/mvnw.cmd
+/mvnw
+/microservicesboot.iws
+/microservicesboot.iml
+.mvn/
+mvnw
+mvnw.cmd
+src/main/resources/static/
+src/main/resources/templates/

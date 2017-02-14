@@ -33,3 +33,5 @@ mvnw
 mvnw.cmd
 src/main/resources/static/
 src/main/resources/templates/
+/out/
+out/

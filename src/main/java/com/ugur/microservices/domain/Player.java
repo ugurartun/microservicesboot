@@ -1,12 +1,37 @@
 package com.ugur.microservices.domain;
 
+import javax.persistence.CollectionTable;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 /**
  * Created by ugurartun on 14/02/17.
  */
+@Entity
 public class Player
 {
+    @Id
+    @GeneratedValue
+    private Long id;
     private String name;
     private String position;
+    private Long teamId;
+
+    public Player()
+    {
+        super();
+    }
+
+    public Player(Long id, String name, String position, Long teamId)
+    {
+        this();
+        this.id = id;
+        this.name = name;
+        this.position = position;
+        this.teamId = teamId;
+    }
 
     public String getName()
     {
@@ -27,5 +52,26 @@ public class Player
     {
         this.position = position;
     }
+
+    public Long getId()
+    {
+        return id;
+    }
+
+    public void setId(Long id)
+    {
+        this.id = id;
+    }
+
+    public Long getTeamId()
+    {
+        return teamId;
+    }
+
+    public void setTeamId(Long teamId)
+    {
+        this.teamId = teamId;
+    }
+
 
 }

@@ -1,10 +1,14 @@
 package com.ugur.microservices;
 
+import com.ugur.microservices.domain.Team;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.rest.core.annotation.RestResource;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -19,4 +23,5 @@ public class HelloController
         model.put("name", name);
         return "Hello World";
     }
+
 }

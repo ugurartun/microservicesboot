@@ -18,6 +18,8 @@ public class Player
     private String name;
     private String position;
     private Long teamId;
+    private int age;
+
 
     public Player()
     {
@@ -73,5 +75,13 @@ public class Player
         this.teamId = teamId;
     }
 
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
 
 }

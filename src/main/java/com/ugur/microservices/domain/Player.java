@@ -26,13 +26,25 @@ public class Player
         super();
     }
 
-    public Player(Long id, String name, String position, Long teamId)
+    @Override
+    public String toString() {
+        return "Player{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", position='" + position + '\'' +
+                ", teamId=" + teamId +
+                ", age=" + age +
+                '}';
+    }
+
+    public Player(Long id, String name, String position, Long teamId, int age)
     {
         this();
         this.id = id;
         this.name = name;
         this.position = position;
         this.teamId = teamId;
+        this.age = age;
     }
 
     public String getName()

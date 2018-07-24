@@ -18,19 +18,33 @@ public class Player
     private String name;
     private String position;
     private Long teamId;
+    private int age;
+
 
     public Player()
     {
         super();
     }
 
-    public Player(Long id, String name, String position, Long teamId)
+    @Override
+    public String toString() {
+        return "Player{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", position='" + position + '\'' +
+                ", teamId=" + teamId +
+                ", age=" + age +
+                '}';
+    }
+
+    public Player(Long id, String name, String position, Long teamId, int age)
     {
         this();
         this.id = id;
         this.name = name;
         this.position = position;
         this.teamId = teamId;
+        this.age = age;
     }
 
     public String getName()
@@ -73,5 +87,13 @@ public class Player
         this.teamId = teamId;
     }
 
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
 
 }

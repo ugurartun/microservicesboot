@@ -88,5 +88,9 @@ public class Team
         this.id = id;
     }
 
-
+    @Override public String toString()
+    {
+        return "Team{" + "id=" + id + ", name='" + name + '\'' + ", location='" + location + '\'' + ", mascotte='" + mascotte + '\'' + ", players=" +
+            players + '}';
+    }
 }

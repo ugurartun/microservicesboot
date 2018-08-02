@@ -9,6 +9,6 @@ import org.springframework.data.repository.query.Param;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long>{
-    @Query("SELECT user FROM User con  WHERE con.phoneNumber=(:pNumber)")
+    @Query("SELECT user FROM User user  WHERE user.phone=(:pNumber)")
     User findByLastNameAndPhoneType(@Param("pNumber") String pNumber);
 }

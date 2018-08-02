@@ -21,6 +21,9 @@ public class User
     private String name;
     @Column(name = "surname")
     private String surname;
+    @Column(name = "phone_number")
+    private String phone;
+
 
     public Long getId()
     {
@@ -60,6 +63,14 @@ public class User
     public void setSurname(String surname)
     {
         this.surname = surname;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     @Override public String toString()

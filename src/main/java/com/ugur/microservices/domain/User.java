@@ -1,9 +1,6 @@
 package com.ugur.microservices.domain;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.List;
 
 /**
@@ -21,7 +18,7 @@ public class User
     private String name;
     @Column(name = "surname")
     private String surname;
-    @Column(name = "phone_number")
+    @Column(name = "phone_number", unique = true)
     private String phone;
 
 

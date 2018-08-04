@@ -46,8 +46,8 @@ public class UserRepositoryTest {
         user.setSurname(TEST_SURNAME);
         user.setPhone(TEST_PHONE);
         userRepository.save(user);
-        user = userRepository.findByLastNameAndPhoneType(TEST_PHONE);
-        assertNull(userRepository.findByLastNameAndPhoneType("05554443311"));
+        user = userRepository.findByPhoneNumber(TEST_PHONE);
+        assertNull(userRepository.findByPhoneNumber("05554443311"));
         assertEquals(TEST_NAME,user.getName());
 
     }

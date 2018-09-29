@@ -1,5 +1,7 @@
 package com.ugur.microservices.domain;
 
+import lombok.Data;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -11,6 +13,7 @@ import javax.validation.constraints.NotNull;
 /**
  * Created by ugurartun on 27/07/18.
  */
+@Data
 @Entity
 public class Address
 {
@@ -41,85 +44,5 @@ public class Address
     @Column(name = "address_type")
     @Enumerated(EnumType.STRING)
     private AddressType addressType;
-
-    public Long getId()
-    {
-        return id;
-    }
-
-    public void setId(Long id)
-    {
-        this.id = id;
-    }
-
-    public Long getUserId()
-    {
-        return userId;
-    }
-
-    public void setUserId(Long userId)
-    {
-        this.userId = userId;
-    }
-
-    public String getCountryName()
-    {
-        return countryName;
-    }
-
-    public void setCountryName(String countryName)
-    {
-        this.countryName = countryName;
-    }
-
-    public String getCityName()
-    {
-        return cityName;
-    }
-
-    public void setCityName(String cityName)
-    {
-        this.cityName = cityName;
-    }
-
-    public String getTownName()
-    {
-        return townName;
-    }
-
-    public void setTownName(String townName)
-    {
-        this.townName = townName;
-    }
-
-    public String getQuarterName()
-    {
-        return quarterName;
-    }
-
-    public void setQuarterName(String quarterName)
-    {
-        this.quarterName = quarterName;
-    }
-
-    public String getDistrictName()
-    {
-        return districtName;
-    }
-
-    public void setDistrictName(String districtName)
-    {
-        this.districtName = districtName;
-    }
-
-    public AddressType getAddressType()
-    {
-        return addressType;
-    }
-
-    public void setAddressType(AddressType addressType)
-    {
-        this.addressType = addressType;
-    }
 
 }

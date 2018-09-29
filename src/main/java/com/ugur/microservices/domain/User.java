@@ -1,13 +1,18 @@
 package com.ugur.microservices.domain;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 /**
  * Created by ugurartun on 27/07/18.
  */
-@Data
+@Getter
+@Setter
 @Entity
 public class User
 {

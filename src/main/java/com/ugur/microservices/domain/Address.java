@@ -1,19 +1,16 @@
 package com.ugur.microservices.domain;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 /**
  * Created by ugurartun on 27/07/18.
  */
-@Data
+@Getter
+@Setter
 @Entity
 public class Address
 {

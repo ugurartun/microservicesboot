@@ -12,5 +12,5 @@ import java.util.List;
 @RestResource(path="teams", rel="team")
 public interface TeamRepository extends CrudRepository<Team, Long>
 {
-    public List<Team> findByName(String name);
+    List<Team> findByName(String name);
 }

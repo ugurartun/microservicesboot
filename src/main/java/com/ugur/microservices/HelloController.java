@@ -1,6 +1,7 @@
 package com.ugur.microservices;
 
 import com.ugur.microservices.domain.Team;
+import org.springframework.context.annotation.Scope;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RestResource;
 import org.springframework.stereotype.Controller;

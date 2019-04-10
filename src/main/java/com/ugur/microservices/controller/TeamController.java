@@ -18,7 +18,7 @@ public class TeamController
     @Autowired
     private TeamRepository teamRepository;
 
-    @RequestMapping("/teams")
+    @RequestMapping()
     @GetMapping
     public Iterable<Team> getTeams()
     {

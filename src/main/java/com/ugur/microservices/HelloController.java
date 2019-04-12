@@ -1,6 +1,8 @@
 package com.ugur.microservices;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -13,6 +15,7 @@ import java.util.Map;
 @Controller
 public class HelloController
 {
+    @Transactional(propagation = Propagation.REQUIRED)
     @RequestMapping("/hi/{name}")
     public @ResponseBody String hiThere(Map model, @PathVariable String name)
     {

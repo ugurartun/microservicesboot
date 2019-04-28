@@ -24,7 +24,7 @@ public class UserRepositoryTest {
 
     private static final String TEST_NAME = "ugur";
     private static final String TEST_SURNAME = "artun";
-    private static final String TEST_PHONE = "05554443322";
+    private static final String TEST_PHONE = "0555444322";
 
     @Test
     public void saveTest() {

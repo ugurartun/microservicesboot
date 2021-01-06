@@ -1,0 +1,27 @@
+services:
+  myapp-mysql:
+    image: mysql:8.0
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=test
+      - MYSQL_USER=myapp-user
+      - MYSQL_PASSWORD=password
+    ports:
+      - 3306:3306
+
+  myapp-main:
+    image: myapp-image-name-that-appears-when-you-run-docker-images
+    restart: on-failure
+    depends_on:
+      - myapp-mysql
+    ports:
+      - 8080:8080
+    environment:
+      - DATABASE_HOST=myapp-mysql
+      - DATABASE_USER=myapp-user
+      - DATABASE_PASSWORD=password
+      - DATABASE_NAME=test
+      - DATABASE_PORT=3306
+
+networks:
+  spring-boot-mysql:
